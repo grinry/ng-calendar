@@ -15,6 +15,7 @@ import { TaskHoursGroupComponent } from './components/task-hours-group.component
 import { TaskExpensesGroupComponent } from './components/task-expenses-group.component';
 import { TaskAdditionalHoursGroupComponent } from './components/task-additional-hours-group.component';
 import { TaskGroupComponent } from './components/task-group.component';
+import { CalendarRoutingModule } from './calendar-routing.module';
 
 
 @NgModule({
@@ -37,6 +38,7 @@ import { TaskGroupComponent } from './components/task-group.component';
   imports: [
     CommonModule,
     HttpClientModule,
+    CalendarRoutingModule,
   ],
   providers: [
     fakeBackendProvider,

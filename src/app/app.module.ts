@@ -4,6 +4,7 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { CalendarModule } from './calendar/calendar.module';
+import { NotFoundErrorComponent } from './error-404/not-found-error.component';
 
 @NgModule({
   declarations: [

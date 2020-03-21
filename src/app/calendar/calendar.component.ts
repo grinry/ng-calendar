@@ -2,6 +2,7 @@ import { ChangeDetectionStrategy, Component, OnDestroy, OnInit } from '@angular/
 import { CalendarService } from './services/calendar.service';
 import { Subscription } from 'rxjs';
 import { DayModel } from './models/day.model';
+import { Title } from '@angular/platform-browser';
 
 @Component({
   selector: 'app-calendar',
@@ -18,10 +19,11 @@ export class CalendarComponent implements OnInit, OnDestroy {
   public days: Array<DayModel> = [];
   private subs = new Subscription();
 
-  constructor(private calendar: CalendarService) {
+  constructor(private calendar: CalendarService, private title: Title) {
   }
 
   ngOnInit() {
+    this.title.setTitle('Calendar');
     this.addSubscribers();
     this.days = this.calendar.initCalendarDays(7);
   }
