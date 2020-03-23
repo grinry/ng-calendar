@@ -7,7 +7,7 @@ import { DayModel } from '../models/day.model';
   selector: 'app-calendar-header-title',
   template: `
     <div class="col">
-      <h5 class="card-title">{{ day.date | date: 'MMMM yyyy' }}</h5>
+      <h6 class="card-title mb-0 mt-1">{{ day.date | date: 'MMMM yyyy' }}</h6>
     </div>
     <div class="col col-auto">
       <button class="btn" (click)="selectToday($event)">
@@ -21,6 +21,11 @@ import { DayModel } from '../models/day.model';
     </div>
   `,
   changeDetection: ChangeDetectionStrategy.OnPush,
+  styles: [
+      `.btn {
+      padding: 0;
+    }`,
+  ],
 })
 export class CalendarHeaderTitleComponent {
   @Input() day: DayModel;

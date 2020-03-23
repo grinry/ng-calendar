@@ -4,10 +4,12 @@ import { DayModel } from '../models/day.model';
 @Component({
   selector: 'app-calendar-header',
   template: `
-    <app-calendar-header-title class="row" [day]="days[0]"></app-calendar-header-title>
+    <app-calendar-header-title class="row mb-2" [day]="days[0]"></app-calendar-header-title>
     <div class="row">
-      <div class="col" *ngFor="let day of reversedDays; trackBy: trackByFn">
-        <app-calendar-header-day [day]="day"></app-calendar-header-day>
+      <div class="col d-flex flex-nowrap flex-row justify-content-between">
+        <div *ngFor="let day of reversedDays; trackBy: trackByFn">
+          <app-calendar-header-day [day]="day"></app-calendar-header-day>
+        </div>
       </div>
     </div>
   `,

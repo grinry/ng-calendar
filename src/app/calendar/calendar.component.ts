@@ -7,13 +7,18 @@ import { Title } from '@angular/platform-browser';
 @Component({
   selector: 'app-calendar',
   template: `
-    <div class="card shadow bg-white">
+    <div class="card shadow bg-white mx-auto">
       <app-calendar-header class="card-header bg-white" [days]="days"></app-calendar-header>
       <app-calendar-body class="card-body"></app-calendar-body>
       <app-calendar-footer class="card-footer"></app-calendar-footer>
     </div>
   `,
   changeDetection: ChangeDetectionStrategy.OnPush,
+  styles: [
+      `.card {
+      max-width: 480px;
+    }`,
+  ],
 })
 export class CalendarComponent implements OnInit, OnDestroy {
   public days: Array<DayModel> = [];

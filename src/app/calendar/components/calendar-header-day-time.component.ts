@@ -11,7 +11,7 @@ type DayState = 'rejected' | 'approved' | 'mixed' | 'none';
 @Component({
   selector: 'app-calendar-header-day-time',
   template: `
-    <time class="mx-auto mt-1">{{ time || '-' }}</time>
+    <time class="mx-auto mt-1 small">{{ time || '-' }}</time>
     <div [hidden]="state == 'none'"
          class="indicator mx-auto"
          [class.bg-red]="state == 'rejected'"

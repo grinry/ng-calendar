@@ -2,10 +2,11 @@ $font-family-base: 'Roboto';
 
 $body-bg: #F3F3F5;
 
-
 $theme-colors: (
   "orange": #F08900,
-  "red": #FF0000,
-  "green": #00FF00,
-  "grey": #F0F0F0,
+  "black": #000000,
+  "grey": rgba(0, 0, 0, 0.6),
+  "red": #dc3545,
+  "green": #28a745,
 );
+

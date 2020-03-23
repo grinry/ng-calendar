@@ -15,7 +15,7 @@ import { Component, Input } from '@angular/core';
           </div>
         </div>
       </div>
-      <div class="card-body">
+      <div class="card-body small">
         <ng-content></ng-content>
       </div>
     </div>

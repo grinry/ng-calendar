@@ -8,10 +8,10 @@ import { take } from 'rxjs/operators';
 @Component({
   selector: 'app-calendar-body',
   template: `
-    <div class="row mb-3">
-      <div class="col col-auto">{{ date | date: 'EEEE' }}</div>
-      <div class="col">{{ date | date: 'dd.MM.yyyy' }}</div>
-      <div class="col col-auto">
+    <div class="row mb-3 align-items-center">
+      <div class="col-6 col-sm-auto">{{ date | date: 'EEEE' }}</div>
+      <div class="col text-right text-sm-left">{{ date | date: 'dd.MM.yyyy' }}</div>
+      <div class="col-12 col-sm-auto text-center text-sm-right">
         <button class="btn btn-link text-uppercase text-orange">Go to timesheet</button>
       </div>
     </div>

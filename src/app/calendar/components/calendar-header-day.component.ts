@@ -9,8 +9,8 @@ import { Subscription } from 'rxjs';
     <button class="btn btn-block"
             [class.text-muted]="isWeekend"
             (click)="select(day)">
-      <div>{{ date | date: 'E' }}</div>
-      <div class="font-weight-bold"
+      <div class="small">{{ date | date: 'E' }}</div>
+      <div class="font-weight-bold rounded __day"
            [ngClass]="{ 'border border-orange': isToday, 'btn-orange text-white': isSelected }">
         {{ date | date: 'dd' }}
       </div>
@@ -18,6 +18,15 @@ import { Subscription } from 'rxjs';
     </button>
   `,
   changeDetection: ChangeDetectionStrategy.OnPush,
+  styles: [
+      `.__day {
+      padding: 5px;
+      margin: 5px 0;
+    }`,
+      `.btn {
+      padding: 0;
+    }`,
+  ],
 })
 export class CalendarHeaderDayComponent implements OnInit, OnDestroy, OnChanges {
   @Input() day: DayModel;
